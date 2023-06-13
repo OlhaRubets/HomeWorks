@@ -1,4 +1,4 @@
-const currentYear= parseInt(prompt(`Введіть поточний рік`))
+const currentYear= 2023
 let yearOfBirth= parseInt(prompt(`Введіть рік народження`))
 
 let userAge= currentYear-yearOfBirth
