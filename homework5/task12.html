@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 12. Ігровий автомат. 
+        // Випадково вибираємо зображення у 3 позиціях. 
+        // Вибір у кожній позиції вибирається як одне з чотирьох зображень. 
+        // Вивести ці зображення і повідомити виграш користувача 
+        // (три перших зображення 100 грн, три других – 200, три третіх – 500, 
+        // три четвертих зображення – 1000грн). Використати цикли і switch 
+        // (для вибору зображення за номером).
+
+        let img1= (`<img src="img/img1.webp" alt="banana" width="50px" height="50px">`)
+        let img2= (`<img src="img/img2.webp" alt="grape" width="50px" height="50px">`)
+        let img3= (`<img src="img/img3.webp" alt="apple" width="50px" height="50px">`)
+        let img4= (`<img src="img/img4.webp" alt="plum" width="50px" height="50px">`)
+        let turn1, turn2, turn3, result
+        let block
+
+        for (let block = 0; block < 3; block++) {
+            let random=1+Math.floor(Math.random()*4)
+            switch (random) {
+                case 1: turnValue=(`<img src="img/img1.webp" alt="banana" width="50px" height="50px">`)   
+                    break;
+                    case 2: turnValue=(`<img src="img/img2.webp" alt="grape" width="50px" height="50px">`)  
+                    break;
+                    case 3: turnValue=(`<img src="img/img3.webp" alt="apple" width="50px" height="50px">`)
+                    break;
+                    case 3: turnValue=(`<img src="img/img4.webp" alt="plum" width="50px" height="50px">`)   
+                    break;  
+            }  
+                    document.write(`${turnValue}`)
+
+                if (block===0) {
+                    turn1=turnValue   
+                } else if (block===1){
+                    turn2=turnValue
+                }else if(block===2){
+                    turn3=turnValue
+        }    
+        }
+       
+        if (turn1===turn2 && turn2===turn3) {
+            switch (turn1) {
+                case img1: result="You win 100hrn" 
+                    break;
+                    case img2: result="You win 200hrn" 
+                    break;
+                    case img3: result="You win 500hrn" 
+                    break;
+                    case img4: result="You win 1000hrn" 
+                    break;
+            }
+            
+        } else{result="You lose"
+    }
+        
+
+        document.write(`<div class="picture"> ${result}</div>`)
+
+    </script>
+   
+</body>
+</html>

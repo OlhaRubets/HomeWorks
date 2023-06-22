@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 13. Морський бій. Комп’ютер випадково розташовує одиночний 
+        // корабель на полі розміром N*M.
+        //  Маючи К снарядів користувач намагається потопити корабель.
+        
+        let horizontalLineM=parseInt(prompt("Введіть кількість клітинок по-горизонталі"))
+        let verticalLineN=parseInt(prompt("Введіть кількість клітинок по-вертикалі"))
+        let numberShells=parseInt(prompt("Введіть кількість снарядів"))
+        let placeShip=1+Math.floor(Math.random()*(horizontalLineM*verticalLineN))
+        let yourGoal
+        document.write("<table>")
+
+        for (let m = 0; m < horizontalLineM; m++) {
+            document.write("<tr>")
+            for (let n = 0; n < verticalLineN; n++) {
+                document.write("<td>0</td>")    
+            }  
+            document.write("</tr>")
+        }
+        document.write("</table>")
+        for (let letTry = 0; letTry < numberShells; letTry++) {
+             yourGoal=parseInt(prompt("Номер клітинки, де Ви думаєте розміщений корабель"))
+         
+        }
+        if(yourGoal!==numberShells){
+            alert( `Ви програли, корабель був тут ${placeShip}`)
+        }else 
+        alert("Вітаю, Ви потопили корабель")
+        
+    </script>
+  
+</body>
+</html>

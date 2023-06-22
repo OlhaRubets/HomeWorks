@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 11. Знайти суму 5 непарних чисел, 
+        // що знаходяться між заданими користувачем числами.
+
+        let sumOddNumbers=0
+        let count=0
+        let userFirstNumber=parseInt(prompt("Введіть будь яке число від 1 до 15"))
+        let userSecondNumber=parseInt(prompt("Введіть будь яке число від 16 до 30"))
+
+        for (let number = userFirstNumber; number <= userSecondNumber; number++) {
+            if (number % 2 !==0){
+            sumOddNumbers+=number
+            count ++
+        }
+               if (count===5) {
+                break 
+               }
+        }
+        document.write(`${sumOddNumbers}`)
+
+    </script>
+</body>
+</html>

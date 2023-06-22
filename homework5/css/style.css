@@ -1,0 +1,150 @@
+/* @import url("reset.css"); */
+
+
+ body {
+	/* Значення за замовченням */
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #424551;
+	background-color: #333;
+	color: #fff;
+	/* font-size: 16px; */
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+.page__container {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap: 20px;
+}
+/* ============================ */
+
+.page {
+	padding: 50px;
+	
+}
+
+.header {
+	text-align: center;
+	font-size: 32px;
+
+}
+
+
+.page__block {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	
+	
+	box-shadow: #fff 3px 3px 5px;
+}
+
+.page__task {
+	flex-grow: 1;
+
+}
+.page__task img{
+	max-width: 250px;
+	border-radius: 30px;
+}
+.page__button {
+	align-self: center;
+	margin-bottom: 25px;
+
+}
+.button {
+	margin-top: 25px;
+
+}
+.button__link:hover{
+	
+	background: linear-gradient(0deg, rgba(253,187,45,0.4234287464985994) 1%, rgba(34,193,195,1) 100%);
+}
+.button__link {
+	padding: 20px 40px;
+	border-radius: 15px;
+	transition: all 0.5s;
+	
+	background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.4234287464985994) 100%);
+}
+
+table{
+	border: 2px solid #ec7777;
+	display: inline-block;
+	margin-right: 15px;
+}
+
+tr, td{
+	padding: 15px;
+	border: 2px solid #fff;
+}
+
+.table-task1{
+	padding-top: 50px;
+	max-width: 1270px;
+	margin: 0 auto;
+
+}
+.task0{
+	padding-top: 50px;
+	max-width: 1270px;
+	margin: 0 auto;
+
+}
+.title-order{
+	font-size: 34px;
+	font-weight: 600;
+	border-bottom: 2px dotted #fff;
+}
+.product {
+
+	border: 2px solid #fff;
+	border-radius: 10px;
+	max-width: 450px;
+	margin: 50px auto;
+	text-align: center;
+
+}
+.goods,
+.goods1{
+	padding: 15px 0;
+}
+.goods:not(:last-child) {
+	border-bottom: 2px solid #c2a2a2;
+}
+.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.button-task0{
+	color: black;
+	padding: 15px;
+	background-color: #ebd9d9;
+	text-align: center;
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+.button-task0:hover{
+	transform: scale(1.1);
+}
+
+li{
+	margin: 15px;
+}
+input:not(:last-child){
+	margin-bottom: 10px;
+} 

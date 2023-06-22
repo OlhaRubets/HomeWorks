@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Вивести таблицю
+
+        let userRow= parseInt(prompt("Ведіть кількість рядків"))
+        let userColumn= parseInt(prompt("Ведіть кількість стовпчиків"))
+        let number= 1
+        document.write('<table>')
+        for (let j = 1; j <= userRow; j++) {
+            document.write("<tr>");
+          for (let k = 1; k <= userColumn; k++) {
+            document.write(`<td> ${number++}</td>`);  
+          }  
+          document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+   
+</body>
+</html>

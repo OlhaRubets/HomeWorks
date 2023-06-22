@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script> 
+    //Задача 6. Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+        let number=1
+        for (let a = 0; a < 3; a++) {
+            document.write('<table>');
+            for (let b = 0; b < 3; b++) {
+                document.write('<tr>');
+                    for (let c = 0; c < 3; c++) {
+                        document.write(`<td>${number++}</td>`);  
+                    }
+                    document.write('</tr>'); 
+            }
+            document.write('</table>');
+        }</script>
+</head>
+<body>
+   
+    
+</body>
+</html>

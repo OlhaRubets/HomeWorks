@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // Задача 8.Користувач загадує число. 
+    //    За 3 спроби комп’ютер намагається вгадати число користувача 
+    //    (використати confirm).
+
+    let number= parseInt(prompt("Введіть число"))
+    let num=0
+    for (let i = 0; i < 3; i++) {
+        let randomNumber= Math.floor(Math.random() * number)+1;
+        if (confirm(`Число комп'ютера ${randomNumber} дорівнює Вашему числу ${number}?`)) {
+            if (randomNumber===number) {
+                alert("Комп'ютер вгадав") 
+                break
+            }
+        } 
+    }
+
+  
+
+
+    </script>
+</body>
+</html>
