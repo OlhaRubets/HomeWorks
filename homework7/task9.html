@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 9. Дано покази температур (довільна кількість). 
+        // Розробити функцію, яка дозволить підрахувати кількість від’ємних показів температури.
+
+        function getTemperature(numberOfNegativeTemperature) {
+            let negativeTemperature=0
+            for (let i = 0; i < numberOfNegativeTemperature; i++) {
+                let randomTemperature= -20 + Math.floor(Math.random()* (20-(-20)+1))
+                if (randomTemperature < 0 ) 
+                    negativeTemperature +=1
+                
+                
+                
+            } 
+            let result= negativeTemperature
+                return result
+            
+        }
+        document.write(`Кількість від’ємних показів температури ${getTemperature(10)}`)
+        
+          
+        
+
+    </script>
+</body>
+</html>
