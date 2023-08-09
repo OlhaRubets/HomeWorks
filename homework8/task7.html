@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 7. Дано послідовність платіжок протягом року. 
+        // Знайти сумарну кількість грошей за:
+        //     за весь рік;
+        //     у першій половині року;
+        //     у другій половині року;
+        //     за літо;
+        //     за ІІ квартал;
+        //     за парні місяці (з парними номерами);
+        //     за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+
+        
+
+        function getPayBills() {
+            let arr=[]
+            for (let i = 0; i < 12; i++) {
+                let monthBills= parseFloat(prompt(`Введіть суму платіжки за ${i +1}-й місяць `))
+                arr.push(monthBills)
+            }
+            return arr
+        }
+        let payBills=getPayBills()
+        document.write(`Платежі за кожен місяць: ${payBills} <br>`)
+
+        function getBillsForTheWholeYear(payBills) {
+            let sum= 0
+            for (let i = 0; i < 12; i++) {
+                sum +=payBills[i]
+                
+            }
+            return  sum
+        }
+        function getBillsForTheFirstSixMonth(payBills) {
+            let sum= 0
+            for (let i = 0; i < 6; i++) {
+                sum+=payBills[i]
+                
+            }
+            return sum
+        }
+        function getBillsForTheLastSixMonth(payBills) {
+            let sum= 0
+            for (let i = 6; i < 12; i++) {
+                sum+=payBills[i]
+                
+            }
+            return sum
+        }
+        function getBillsForSummerMonth(payBills) {
+            let sum= 0
+            for (let i = 6; i < 9; i++) {
+                sum+=payBills[i]
+                
+            }
+            return sum
+        }
+        function getBillsForSecondQuarter(payBills) {
+            let sum= 0
+            for (let i = 3; i < 6; i++) {
+                sum+=payBills[i]
+                
+            }
+            return sum
+        }
+        function getBillsForEvenMonth(payBills) {
+            let sum= 0
+            for (let i = 0; i < 12; i+=2) {
+                sum+=payBills[i]   
+            }
+            return sum
+        }
+        function getBillsSeasonPayment(payBills) {
+            let sum= 0
+            for (let i = 0; i < 12; i+=3) {
+                sum+=payBills[i]   
+            }
+            return sum
+        }
+        let billsForTheWholeYear=getBillsForTheWholeYear(payBills)
+        document.write(`Сумарну кількість грошей за весь рік: ${billsForTheWholeYear} <br>`)
+
+       let billsForTheFirstSixMonth=getBillsForTheFirstSixMonth(payBills)
+       document.write(`Сумарну кількість грошей у першій половині року: ${billsForTheFirstSixMonth} <br>`)
+
+       let billsForTheLastSixMonth=getBillsForTheLastSixMonth(payBills) 
+       document.write(`Сумарну кількість грошей у другій  половині року ${billsForTheLastSixMonth} <br>`) 
+
+       let billsForSummerMonth=getBillsForSummerMonth(payBills)
+       document.write(`Сумарну кількість грошей за літо: ${billsForSummerMonth} <br>`)
+
+       let billsForSecondQuarter=getBillsForSecondQuarter(payBills)
+       document.write(`Сумарну кількість грошей за ІІ квартал: ${billsForSecondQuarter} <br>`)
+
+       let billsForEvenMonth=getBillsForEvenMonth(payBills)
+       document.write(`Сумарну кількість грошей за парні місяці (з парними номерами): ${billsForEvenMonth}<br>`)
+
+       let billsSeasonPayment=getBillsSeasonPayment(payBills)
+       document.write(`Сумарну кількість грошей за місяці, які є початковими у сезоні (весна, літо, осінь, зима):${billsSeasonPayment}`)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     Задача 1. Дано масив, який містить оцінки з К предметів. 
+    //     Знайти середній бал і з’ясувати до якої категорії він відноситься
+    //      (відмінник, двійочник (має хоча би одну двійку),
+    //       хорошист (оцінки добре і відмінно), 
+    //     трійочник(є хоча би одна трійка)).
+
+    
+        
+        
+    function getAverageGrade(arr) {
+        let sumGrade = 0
+        for (let j = 0; j < arr.length; j++) {
+            sumGrade +=arr[j] 
+        }
+        let averageGrade=sumGrade/arr.length
+        return averageGrade
+        
+    }
+    function getMinGrade(arr) {
+        let minGrade= arr[0]
+        for (let k = 0; k < arr.length; k++) {
+            if (minGrade>arr[k])  minGrade=arr[k]
+            
+        }
+        return minGrade
+        
+    }
+    function getStudentCategory(arr) {
+        let studentCategory
+        switch ( getMinGrade(arr)) {
+            case 1:
+            case 2:
+            studentCategory= 'Двієчник'  
+                break;
+            case 3:
+            studentCategory= 'Трієчник'  
+                break;
+            case 4:
+            studentCategory= 'Хорошист'  
+                break;
+            case 5:
+            studentCategory= 'Відмінник'  
+                break;
+            default: 'Не коректний бал'
+                break;
+        }
+
+        return studentCategory
+    }
+    let numberLessons=parseInt(prompt('Введіть кількість предметів'))
+    let arr=[]
+        for (let i = 0; i < numberLessons; i++) {
+            let grade=parseInt(prompt(`Оцінка з ${i+1}-го предмету`))
+            arr.push(grade)
+        }
+    let averageGradeValue = getAverageGrade(arr)
+    let studentCategoryValue = getStudentCategory(arr)
+    document.write(`Середній бал= ${averageGradeValue}<br> Категорія студента ${studentCategoryValue}`  ) 
+
+
+    // </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 4. Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які :
+        // •	починаються на букву «А»;
+        // •	перша і остання літери співпадають;
+        // •	складаються з більше ніш 5 символів;
+        let carNumbers= prompt('Введіть кількість автомобілів')
+        function getSequenceOfCarNumbers(numArray) {
+            let arr=[]
+            for (let i = 0; i < carNumbers; i++) {
+               let carLicensePlates=prompt( `Введуть номер ${i+1}-го авто`)
+               arr.push(carNumbers)
+            }
+            return arr
+        }
+        let sequenceOfCarNumbers= getSequenceOfCarNumbers(carNumbers)
+        console.log(sequenceOfCarNumbers)
+        // ===============================================
+        function getCarLicensePlatesBeginA(array) {
+            let sum=0
+          for (let i = 0; i < array.length; i++) {
+            if (array[i][0] == "A") {
+                sum++
+            }   
+          }
+          return sum
+        }
+        getCarLicensePlatesBeginA(sequenceOfCarNumbers)
+        document.write(`Кількість номерів, які починаються на А =
+         ${getCarLicensePlatesBeginA(sequenceOfCarNumbers)} <br>`)
+
+// =====================================================
+        function getSameFirstAndLastNumber(array) {
+            let sum=0
+            for (let i = 0; i < array.length; i++) {
+                let a= array [i]
+                let b= a.length
+                if (a[0] == a[b - 1]){
+                    sum ++
+                } 
+            }
+            return sum
+        }
+        document.write(`Кількість номерів, які починаються і закінчуються однаково
+         ${getSameFirstAndLastNumber(sequenceOfCarNumbers)} <br>`)
+// =======================================================
+        function getLengthMoreFive(array) {
+            let sum=0
+            for (let i = 0; i < array.length; i++) {
+                let a= array
+                let b= a.length
+                if(b>5){
+                    sum ++
+                }
+            }
+            return sum
+        }
+
+        document.write(`Кількість знаків що складаються з більше ніш 5 символів
+         ${getLengthMoreFive(sequenceOfCarNumbers)} <br>`)
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
